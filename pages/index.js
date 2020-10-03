@@ -1,10 +1,12 @@
 import Head from "next/head"
 import { Component } from 'react'
 import { attributes, react as HomeContent } from '../content/home.md';
+import { attributes as blogAttributes, react as BlogContent } from '../content/blog.md';
 
 export default class Home extends Component {
   render() {
     let { title, cats } = attributes;
+    console.log(blogAttributes)
     return (
       <>
         <Head>
@@ -21,6 +23,8 @@ export default class Home extends Component {
               </li>
             ))}
           </ol>
+
+          <BlogContent />
         </article>
       </>
     )
